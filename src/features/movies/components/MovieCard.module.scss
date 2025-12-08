@@ -1,0 +1,96 @@
+.movieCard {
+  min-width: 200px;
+  background: var(--color-elements);
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  cursor: pointer;
+  transition: all $transition-normal;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+  }
+
+  @include mobile {
+    min-width: 150px;
+  }
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(var(--color-elements-rgb), 0.9);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  z-index: 10;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.moviePoster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: linear-gradient(135deg, hsl(271, 76%, 53%), hsl(271, 76%, 43%));
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.placeholderPoster {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+}
+
+.movieInfo {
+  padding: 1rem;
+}
+
+.movieTitle {
+  font-weight: $font-weight-semibold;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movieMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: hsl(45, 100%, 51%);
+  font-weight: $font-weight-semibold;
+}

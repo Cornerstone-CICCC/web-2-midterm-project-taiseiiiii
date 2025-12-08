@@ -1,0 +1,83 @@
+.header {
+  background: var(--color-elements);
+  box-shadow: $shadow-sm;
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  @include container;
+  @include flex-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  color: hsl(271, 76%, 53%);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '🎬';
+    font-size: 1.8rem;
+  }
+
+  @include mobile {
+    font-size: 1.2rem;
+
+    &::before {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.nav {
+  @include mobile {
+    display: none;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: $font-weight-semibold;
+    transition: color $transition-fast;
+    position: relative;
+
+    &:hover {
+      color: hsl(271, 76%, 53%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: hsl(271, 76%, 53%);
+      transform: scaleX(0);
+      transition: transform $transition-fast;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

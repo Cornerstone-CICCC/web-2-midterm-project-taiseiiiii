@@ -1,0 +1,40 @@
+// Colors
+$blue-900: hsl(209, 23%, 22%);
+$blue-950: hsl(207, 26%, 17%);
+$grey-950: hsl(200, 15%, 8%);
+$grey-400: hsl(0, 0%, 50%);
+$grey-50: hsl(0, 0%, 99%);
+$white: hsl(0, 100%, 100%);
+
+// Typography
+$font-family: 'Nunito Sans', sans-serif;
+$font-size-base: 14px;
+$font-weight-light: 300;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+
+// Breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;

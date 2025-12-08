@@ -1,0 +1,43 @@
+.trendingSection {
+  max-width: 1440px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.trendingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.trendingTitle {
+  font-size: 1.8rem;
+  font-weight: $font-weight-bold;
+}
+
+.moviesScroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-elements);
+    border-radius: $border-radius-sm;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: hsl(271, 76%, 53%);
+    border-radius: $border-radius-sm;
+
+    &:hover {
+      background: hsl(271, 76%, 43%);
+    }
+  }
+}
