@@ -1,0 +1,83 @@
+.watchlistPage {
+  min-height: 80vh;
+  padding: 3rem 0;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--color-text-light);
+  }
+}
+
+.clearButton {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-elements);
+  border: 2px solid hsl(0, 70%, 50%);
+  color: hsl(0, 70%, 50%);
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-semibold;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: hsl(0, 70%, 50%);
+    color: white;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.emptyState {
+  @include flex-center;
+  min-height: 70vh;
+}
+
+.emptyContent {
+  text-align: center;
+  max-width: 400px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+  }
+}
+
+.emptyIcon {
+  font-size: 6rem;
+  display: block;
+  margin-bottom: 1rem;
+}

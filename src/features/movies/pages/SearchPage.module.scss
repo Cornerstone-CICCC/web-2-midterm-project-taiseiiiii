@@ -1,0 +1,43 @@
+.searchResults {
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+
+.container {
+  @include container;
+}
+
+.resultsTitle {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0.5rem;
+}
+
+.resultsCount {
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.noQuery {
+  @include flex-center;
+  min-height: 50vh;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.error {
+  @include flex-center;
+  min-height: 50vh;
+  color: var(--color-text-light);
+}

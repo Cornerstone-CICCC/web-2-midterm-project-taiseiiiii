@@ -1,0 +1,27 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+@use './base/reset';
+@use './base/typography';
+@use './layout/container';
+
+:root {
+  --color-elements: #{$white};
+  --color-background: #{$grey-50};
+  --color-text: #{$grey-950};
+  --color-input: #{$grey-400};
+}
+
+[data-theme='dark'] {
+  --color-elements: #{$blue-900};
+  --color-background: #{$blue-950};
+  --color-text: #{$white};
+  --color-input: #{$white};
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition:
+    background-color $transition-normal,
+    color $transition-normal;
+}

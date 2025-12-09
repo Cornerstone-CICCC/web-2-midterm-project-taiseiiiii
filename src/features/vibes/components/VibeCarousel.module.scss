@@ -1,0 +1,214 @@
+.vibeCarouselSection {
+  padding: 3rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+.carouselContainer {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carouselWrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: $shadow-lg;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.vibeSlide {
+  min-width: 100%;
+  height: 500px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include mobile {
+    height: 400px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px
+    );
+    pointer-events: none;
+  }
+}
+
+.vibeContent {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  z-index: 1;
+}
+
+.vibeEmoji {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+
+  @include mobile {
+    font-size: 4rem;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.vibeName {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.vibeDescription {
+  font-size: 1.2rem;
+  max-width: 500px;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.vibeCta {
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.carouselNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-elements);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  transition: all 0.3s;
+  z-index: 10;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: $shadow-lg;
+  }
+
+  &.prev {
+    left: -30px;
+
+    @include mobile {
+      left: 10px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.next {
+    right: -30px;
+
+    @include mobile {
+      right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-text-light);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.active {
+    background: hsl(271, 76%, 53%);
+    width: 32px;
+    border-radius: 6px;
+    opacity: 1;
+  }
+}
